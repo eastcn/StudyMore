@@ -1,6 +1,9 @@
 package JavaBasic;
 
+import com.sun.org.apache.xalan.internal.xsltc.trax.XSLTCSource;
+
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -13,6 +16,7 @@ import java.lang.reflect.Method;
 public class ForReflect {
 
     private int number = 0;
+    public String publicName = "forReflect";
 
     public void setNumber(int n) {
         number = n;
@@ -35,9 +39,17 @@ public class ForReflect {
         try {
             // 通过类名查询到类
             Class b = Class.forName("JavaBasic.ForReflect");
+            // 通过getSuperclass 获取父类; 通过getInterfaces获取接口
+            Class c = b.getSuperclass();
+            Class[] d = b.getInterfaces();
             // 通过方法名 从类中获取到方法, 设置方法参数的类
             Method getNumber = b.getMethod("getNumber");
             Method setNumber = b.getMethod("setNumber", int.class);
+            // getField方法获取变量，遵循权限控制规则
+            Field publicName1 = b.getField("publicName");
+            // getDeclaredField 方法可获取private的变量
+            Field publicName2 = b.getField("publicName");
+            Field number = b.getDeclaredField("number");
             // 从Class对象中获取类的构造方法
             Constructor constructor = b.getConstructor();
             // 通过构造方法的 newInstance() 实例化一个类
@@ -48,7 +60,10 @@ public class ForReflect {
             setNumber.invoke(object, 5);
             System.out.println(getNumber.invoke(object));
 
-        } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+            // 展示获取到变量的value, 通过Field.get(实例对象)
+            System.out.println(publicName1.get(object));
+
+        } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException | NoSuchFieldException e) {
             e.printStackTrace();
         }
     }
