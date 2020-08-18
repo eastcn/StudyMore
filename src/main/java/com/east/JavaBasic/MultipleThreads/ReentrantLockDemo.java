@@ -9,8 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Classname OtherLocksDemo
- * @Description 其他几种锁的demo
- * 1、ReentrantLock
+ * @Description ReentrantLock
  * @Date 2020/8/18 4:27 下午
  * @Created by East
  */
@@ -37,7 +36,7 @@ public class ReentrantLockDemo {
                 try {
                     count -= 1;
                 } finally {
-                    lock.lock();
+                    lock.unlock();
                 }
             }
         }
@@ -65,10 +64,7 @@ public class ReentrantLockDemo {
                 lock.unlock(); // 解锁
             }
         }
-
-        /**
-         * 如果在1秒钟内没有被唤醒，则返回空
-         */
+        
         public String getTask() throws InterruptedException {
             lock.lock();
             try {

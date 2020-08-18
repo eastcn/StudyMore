@@ -93,7 +93,7 @@ public class CreateThreadsDemo {
         Thread myRunnableThread = new Thread(myRunnable);
         myRunnableThread.start();
 
-        // demo3，通过实现Callable接口
+        // demo3，通过实现Callable接口,详情看见 FutureAndCallable类
 
 
     }
