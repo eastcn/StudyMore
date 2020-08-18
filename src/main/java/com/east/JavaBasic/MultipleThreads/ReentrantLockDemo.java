@@ -14,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Date 2020/8/18 4:27 下午
  * @Created by East
  */
-public class OtherLocksDemo {
+public class ReentrantLockDemo {
     /**
      * ReentrantLock是java实现的，因此需要捕获异常
      * ReentrantLock可以指定获取锁的等待时间，如果指定的时间内没有获取到锁就返回false
