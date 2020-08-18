@@ -5,6 +5,8 @@ package com.east.JavaBasic.MultipleThreads;
  * @Description 线程同步Demo
  * 1、synchronized 同步
  * 2、线程同步在实践过程中最好是将需要同步操作的逻辑代码封装起来，而不是在run方法中实现
+ * 3、synchronized 修饰的锁是可以被重复获取的，被叫做可重入锁，释放的时候也需要一把一把释放
+ * 4、死锁，即：两个线程各自占有着对方需要获取的锁，但是由于程序无法执行下去就无法释放其所占有的锁，就会出现一直等待的情况。
  * @Date 2020/8/18 10:27 上午
  * @Created by East
  */
