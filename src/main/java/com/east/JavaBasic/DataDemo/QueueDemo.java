@@ -24,10 +24,10 @@ public class QueueDemo {
             System.out.println(i);
         }
         // peek()/element() 获取首个但不删除
-        System.out.println(q.peek());
+        System.out.println(q.peek()); // 如果是空的Queue，返回null;element()会抛出NoSuchElement异常
         // remove/poll获取第一个元素并从queue中删除
-        System.out.println(q.remove());
-        System.out.println(q.poll());
+        System.out.println(q.remove()); // 如果是空Queue，会抛出异常
+        System.out.println(q.poll()); // 如果是空的Queue，返回null
         System.out.println(q);
 
         // PriorityQueue, 有优先级的队列，可以实现优先级高的在队首,需要实现一个Comparator接口

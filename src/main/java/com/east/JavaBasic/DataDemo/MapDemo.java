@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class MapDemo {
     public static void main(String[] args) {
-        // map是一种 <K,V>接口的集合, HashMap是一种线程安全的Map实现
+        // map是一种 <K,V>接口的集合, HashMap是一种非线程安全的Map实现
         // map中不存在重复的K
         Map<String, String> map = new HashMap<>();
         map.put("first", "1"); // 增加一个 K,V
