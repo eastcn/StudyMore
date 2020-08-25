@@ -1,4 +1,7 @@
-import java.util.List;
+import com.east.JavaBasic.DataDemo.MapDemo;
+
+import java.text.Collator;
+import java.util.*;
 
 /**
  * @Classname dmeo
@@ -38,14 +41,38 @@ public class dmeo {
     class person {
         String firstName;
         String lastName;
+
+        public person(String f, String l) {
+            firstName = f;
+            lastName = l;
+        }
+
+        public String getFirstName() {
+            return firstName;
+        }
+
+        public String getLastName() {
+            return lastName;
+        }
     }
 
     public void Sorted(List<person> list) {
-        for (int i = 0; i < list.toArray().length; i++) {
-            for (int j = i; j < list.toArray().length; j++) {
-
-            }
+//        LinkedList<MapDemo.User> list = new LinkedList<>();
+        person user1 = new person("张", "三");
+        person user2 = new person("李", "四");
+        person user3 = new person("apple", "lisa");
+        list.add(user1);
+        list.add(user2);
+        list.add(user3);
+        // TreeMap可以实现有序的数据排列，可以传入一个实现Comparable接口的类作为比较规则
+        Comparator comparator = Collator.getInstance(Locale.CHINA); // 根据中文规则来进行排序
+        TreeMap<String, String> treeMap = new TreeMap<>(comparator);
+        for (person u : list
+        ) {
+            treeMap.put(u.getFirstName(), u.getLastName());
         }
+        System.out.println(treeMap);
+
     }
 
     public static void main(String[] args) {
