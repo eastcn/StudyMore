@@ -57,7 +57,7 @@ public class CreateThreadsDemo {
      * 使用标志位来控制线程的运行和中断
      */
     static class flagThread extends Thread {
-        public volatile boolean flag = true;
+        public volatile boolean flag = true; // volatile的使用，把字段的更改立刻写入内存。
 
         @Override
         public void run() {
