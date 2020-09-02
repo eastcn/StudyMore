@@ -20,5 +20,8 @@ public class MainApp {
         HelloSpring hello = (HelloSpring) context.getBean("HelloSpring");
 //        hello.setMessage("hello spring");
         System.out.println(hello.getMessage());
+
+        Student student = (Student) context.getBean("student");
+        System.out.println(student.getAge());
     }
 }

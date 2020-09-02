@@ -27,8 +27,25 @@ public class Sort {
         return array;
     }
 
-    static public int[] quickSort(int[] array) {
-        // 快排
+    static public int[] quickSort(int[] array, int low, int high) {
+        if (low < high) {
+            int x = array[low];
+            int j = high;
+            while (low < high) {
+                while (low < high && array[j] >= x) {
+                    high--;
+                }
+                array[low] = array[high];
+                while (low < high && array[low] <= x) {
+                    low++;
+                }
+                array[high] = array[low];
+            }
+            x = array[low];
+            // 快排
+            quickSort(array, low, x - 1);
+            quickSort(array, x + 1, high);
+        }
         return array;
     }
 
@@ -74,7 +91,7 @@ public class Sort {
 
     public static void main(String[] args) {
         int[] ns = {28, 12, 89, 73, 65, 18, 96, 50, 8, 36};
-        System.out.println(Arrays.toString(insertSort(ns)));
+        System.out.println(Arrays.toString(quickSort(ns, 0, ns.length - 1)));
 
     }
 }

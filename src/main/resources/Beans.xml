@@ -7,5 +7,7 @@
     <bean id="HelloSpring" class="com.east.JavaBasic.SpringDemo.HelloSpring">
         <property name="message" value="Hello Spring!"/>
     </bean>
+    <bean id="student" class="com.east.JavaBasic.SpringDemo.Student">
+    </bean>
 
 </beans>
