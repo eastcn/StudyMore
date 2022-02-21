@@ -17,13 +17,16 @@ public class MapDemo {
         Map<String, String> map = new HashMap<>();
         map.put("first", "1"); // 增加一个 K,V
         System.out.println(map.get("first")); // 根据K查询V
-        // 使用entry 方式遍历map，map遍历是无序的
+        // 1. 使用Map.Entry 方式遍历map，map遍历是无序的
         for (Map.Entry<String, String> map1 : map.entrySet()) {
             String k = map1.getKey();
             String v = map1.getValue();
             System.out.println(k + ":" + v);
         }
-        //
+
+        // 2. 使用Map.keySet方法来得到key的Set，遍历这个Set来循环得到Map的value
+        // 3. 通过 Map.entrySet().iterator(), 来得到一个迭代器，循环这个迭代器来获取Map的key、value
+        // 4. 只遍历value, Map.values() 得到一个value的集合(Collection)
         LinkedList<User> list = new LinkedList<>();
         User user1 = new User("张", "三");
         User user2 = new User("李", "四");
