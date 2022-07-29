@@ -1,4 +1,4 @@
-package com.east.LeetCode.offerProblem46;
+package com.east.LeetCode.OfferProlem.offerProblem46;
 
 /**
  * @Classname TranslateNum

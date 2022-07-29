@@ -1,4 +1,4 @@
-package com.east.LeetCode.offerProblem10_2;
+package com.east.LeetCode.OfferProlem.offerProblem10_2;
 
 /**
  * @Classname NumWays

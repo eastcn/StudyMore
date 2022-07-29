@@ -1,4 +1,4 @@
-package com.east.LeetCode.offerProblem4;
+package com.east.LeetCode.OfferProlem.offerProblem4;
 
 /**
  * @Classname FindNumberIn2DArray

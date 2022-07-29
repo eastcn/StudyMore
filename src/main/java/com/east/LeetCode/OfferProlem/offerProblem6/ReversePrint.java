@@ -1,4 +1,4 @@
-package com.east.LeetCode.offerProblem6;
+package com.east.LeetCode.OfferProlem.offerProblem6;
 
 /**
  * @Classname ReversePrint
@@ -16,7 +16,7 @@ public class ReversePrint {
      * }
      */
     public int[] reversePrint(ListNode head) {
-        int size = 0;
+        int size = 1;
         ListNode node = head;
         while (head.next != null) {
             size += 1;

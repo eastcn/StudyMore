@@ -1,4 +1,4 @@
-package com.east.LeetCode.offerProblem12;
+package com.east.LeetCode.OfferProlem.offerProblem12;
 
 /**
  * @Classname Exist

@@ -1,4 +1,4 @@
-package com.east.LeetCode.offerProblem3;
+package com.east.LeetCode.OfferProlem.offerProblem3;
 
 import java.util.HashMap;
 import java.util.Map;

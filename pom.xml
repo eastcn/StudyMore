@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.3.RELEASE</version>
+        <version>2.4.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
@@ -20,6 +20,14 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -54,11 +62,11 @@
             <version>5.6.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>7.3.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.appium</groupId>-->
+<!--            <artifactId>java-client</artifactId>-->
+<!--            <version>7.3.0</version>-->
+<!--        </dependency>-->
         <!--断言：hamcrest-->
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -66,23 +74,23 @@
             <version>2.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-library</artifactId>
-            <version>2.2</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.hamcrest</groupId>-->
+<!--            <artifactId>hamcrest-library</artifactId>-->
+<!--            <version>2.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>3.141.59</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.seleniumhq.selenium</groupId>-->
+<!--            <artifactId>selenium-java</artifactId>-->
+<!--            <version>3.141.59</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.seleniumhq.selenium</groupId>-->
+<!--            <artifactId>selenium-chrome-driver</artifactId>-->
+<!--            <version>3.141.59</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>mysql</groupId>
@@ -91,10 +99,10 @@
             <scope>runtime</scope>
         </dependency>
         <!-- JDBC驱动 -->
-        <dependency>
-            <groupId>org.hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.hsqldb</groupId>-->
+<!--            <artifactId>hsqldb</artifactId>-->
+<!--        </dependency>-->
 
     </dependencies>
 

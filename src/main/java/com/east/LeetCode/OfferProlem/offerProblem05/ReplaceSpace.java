@@ -1,4 +1,4 @@
-package com.east.LeetCode.offerProblem05;
+package com.east.LeetCode.OfferProlem.offerProblem05;
 
 /**
  * @Classname ReplaceSpace

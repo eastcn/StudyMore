@@ -1,4 +1,4 @@
-package com.east.LeetCode.offerProblem6;
+package com.east.LeetCode.OfferProlem.offerProblem6;
 
 /**
  * @Classname ListNode

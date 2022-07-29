@@ -1,4 +1,4 @@
-package com.east.LeetCode.offerProblem11;
+package com.east.LeetCode.OfferProlem.offerProblem11;
 
 /**
  * @Classname minArray
