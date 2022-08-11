@@ -1,4 +1,4 @@
-package com.east.LeetCode.interviewQ08_01;
+package com.east.LeetCode.InterviewProblems;
 
 /**
  * @Classname findMagicIndex
