@@ -23,7 +23,6 @@ public class Interview05_02 {
         sb.append("0.");
         while (num != 0.0) {
             if (sb.length() >= 32) {
-                System.out.println("超了");
                 return "ERROR";
             }
             double temp = num * 2;
