@@ -74,6 +74,12 @@ public class Class16 {
         }
     }
 
+    /*
+     *
+     *
+     * 具体思路是：从堆的最小非叶子节点开始向上遍历，最小的非叶子节点为 n/2 - 1
+     * 向上遍历的时候，判断当前节点是否为大根堆的父节点，如果不是的话，跟父节点换位置
+     */
     public void heapBuild(int[] array, int curIndex, int heapSize) {
         int max = curIndex; // 假设当前索引指向的为最大值
         int l = curIndex * 2 + 1, r = l + 1;
